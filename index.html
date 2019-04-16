@@ -1,95 +1,93 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)https://codehs.com/editor/458286/solution/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./nr-1118.min.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":3,"licenseKey":"5c532d628b","agent":"","transactionName":"ZgRWZ0tRXBJXBhINVl9OckZXU0YIWQtJAV1YFVtBF0ZbBEEWXANcRT5dR1xdbRJZCRMQUF4P","applicationID":"2416009","errorBeacon":"bam.nr-data.net","applicationTime":238}</script>
-		<title>Coding in Economics</title>
-        <link rel="stylesheet" type="text/css" href="./style.css">
-	</head>
+<html>
+<head>
+<title>Hilhi-OGPC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-	<body>
-        <h1>Coding in Economics</h1>
-        <h4>By Otis Reid </h4>
-        <p>            
-            I’m a PhD student in economics at MIT. I studied economics in
-            undergrad and after spending a  year as a consultant, came to MIT in
-            2013. I focus on development -- why are poor countries  poor? -- and
-            political economy -- why do political leaders make the decisions
-            that they do? Most of my work involves traveling to different
-            countries to collect data, most recently  Uganda and the Democratic
-            Republic of the Congo, but I also work with existing data sets that
-            have been collected by other researchers or organizations like the
-            World Bank.
-        </p>
-        
-        <div class="quote">
-            One secret of economics, like any data-based science, is that there is a lot of coding that 
-            goes into producing our final analyses.
-        </div>
-        
-        <p>
-            One secret of economics, like any data-based science, is that there
-            is a lot of coding that goes  into producing our final analyses. I
-            mostly work in Stata, a data analysis program, but I also do some
-            work in Python. Most of the coding I do is to combine and clean data
-            sets. A simple  example would be that I do two different surveys
-            with the same set of people and then I want to  have all of the
-            answers that one person gave in a single file for analysis. A more
-            complicated  example might involve combining data from different
-            agencies, which use different identifiers:  one of the agencies
-            writes “Tennessee” and another writes “TN”. Maybe a third agency
-            even has  data at the level of cities or counties. Combining this
-            data means writing code that not only  merges the files, but also
-            gives them all a common set of IDs so that all of the data can work
-            together -- writing good code can be the difference between having
-            all your data in one place  versus scattered across many files.
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
 
-        </p>
-        
-        <div class="quote">
-            Knowing how to code can save tens or hundreds of hours and makes
-            projects like analyzing the  complete history of a huge Indian
-            public works program possible.
-        </div>
-        <p>
-            The other way I use coding is to collect data. Even working on
-            development topics, there is a surprising amount of data that’s
-            online. More and more countries are posting data to webpages  as
-            part of transparency efforts. I use Python to make simple web-
-            scrapers to download this data  in batches. Knowing how to code can
-            save tens or hundreds of hours and makes projects like  analyzing
-            the complete history of a huge Indian public works program possible.
-        </p>
-        
-        <div class="quote">
-            By hand, that would have taken days if not weeks -- with Python I
-            did it overnight. As data sets grow  larger and larger, knowing how
-            to code effectively is only getting more important in economics.
-        </div>
-        <p>
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-            Knowing programming languages like Python can also save you tons of
-            time in surprising ways: in February, I needed to rapidly format
-            thousands of assignment sheets for my survey teams to take with them
-            into the  field. By hand, that would have taken days if not weeks --
-            with Python I did it overnight. As data sets grow  larger and
-            larger, knowing how to code effectively is only getting more
-            important in economics. Today’s grad students are much better
-            equipped if they have programming experience in high school and
-            college,  since it makes learning new techniques easier -- and they
-            can often leverage their existing knowledge. Plus, it’s always
-            pretty cool to be able to go for a walk outside and tell people “I’m
-            working right now: my code  is running.” Always good to have the
-            computer working for you!
-        </p>    
-        <p>
-            Otis Reid is a PhD student at MIT in economics, studying development
-            and political economy.
-        </p>
-        <p>
-            <a href="https://medium.com/coding-in-the-wild/coding-in-economics-47bc90ceb246">
-                Orignal article
-                
-            </a>
-        </p>
-	
- 
-</body></html>
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#hilhi">Hilhi</a>
+  <a href="#spoon">Spoon</a>
+  <a href="#prof">Professional Procrastinators</a>
+  <div class="dropdown">
+    <button class="dropbtn">X-et
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Team Members</a>
+      <a href="#">Game 2019</a>
+      <a href="#">Achievements</a>
+      <a href="#">Art and Music</a>
+    </div>
+  </div> 
+</div>
+
+</body>
+</html>
