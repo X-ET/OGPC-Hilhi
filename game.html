@@ -68,6 +68,40 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+    .container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+}
+/* Clear floats after containers */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+/* Increase the font-size of a span element */
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container {
+    text-align: center;
+  }
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
 </style>
 </head>
 <body>
@@ -86,7 +120,18 @@ body {
     </div>
   </div> 
 </div>
-Get through all the levels and beat the boss while collecting gems, but you have to hurry because time is running out! Play as HeadStrong with his Strong ability to push the stone cubes and swing his axe.
-How the game idea came up: We were thinking of ideas and liked the idea of a time based game with multiple characters, but we were running out of time so settled on one character, HeadStrong with close distance combat. Background for the Game: Your character is in a coma and HeadStrong is your inner character while your outer character, Childish, is in a slumber. Beat the boss at the end of the game to wake up from the coma, but if you take to long or don't beat your demons you can't wake up…
+   <div class="container">
+  <p><span>Fractured</span>Game Description:</p>
+  <p>Get through all the levels and beat the boss while collecting gems, but you have to hurry because time is running out! Play as HeadStrong with his Strong ability to push the stone cubes and swing his axe. </p>
+</div>
+ <div class="container">
+  <p><span>Fractured</span>How we came up with this idea:</p>
+  <p>We were thinking of ideas and liked the idea of a time based game with multiple characters, but we were running out of time so settled on one character, HeadStrong with close distance combat.</p>
+</div>
+   <div class="container">
+  <p><span>Fractured</span>Background:</p>
+  <p>Your character is in a coma and HeadStrong is your inner character while your outer character, Childish, is in a slumber. Beat the boss at the end of the game to wake up from the coma, but if you take to long or don't beat your demons you can't wake up…</p>
+</div>
+ 
 </body>
 </html>
