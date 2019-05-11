@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -125,8 +138,9 @@ body {
     </div>
   </div> 
 </div>
-  <img src="Frac3.png" alt="Fractured" class="frac">
-   <div class="container">
+  <div class="imgbox">
+    <img class="center-fit" src='Frac3.png'>
+</div>
   <p><span>Fractured</span>Game Description:</p>
   <p>Get through all the levels and beat the boss while collecting gems, but you have to hurry because time is running out! Play as HeadStrong with his Strong ability to push the stone cubes and swing his axe. </p>
 </div>
